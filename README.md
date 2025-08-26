@@ -4,7 +4,7 @@
 
 ## 📦 MTK Fastboot & ADB Tool (with FRP + Bulk Flash)
 
-A command-line utility for MediaTek-based Android devices that simplifies common Fastboot and ADB operations — including flashing partitions, unlocking bootloaders, erasing FRP, and installing APKs. Designed for power users and ROM developers working with devices like the Infinix X6731.
+A command-line utility for MediaTek-based Android devices that simplifies common Fastboot and ADB operations — including flashing partitions, unlocking bootloaders, erasing FRP, and installing APKs. Designed for power users and ROM developers working with devices like the Infinix ZERO 30 5G (X6731).
 
 ---
 
@@ -34,6 +34,8 @@ A command-line utility for MediaTek-based Android devices that simplifies common
    ```bash
    python mtk_tool.py
    ```
+Or 
+      Just https://t.me/ghokielrom/5694 download and extract in the Windows directory (C drive), open dist, then MTK fastboot tool.
 
 ---
 
@@ -70,7 +72,7 @@ ADB COMMANDS:
 ### 🚀 Flash Full Image Set (Option 17)
 
 
-This option flashes all critical partitions in one go. The following files must be present:
+This option flashes all critical partitions simultaneously. The following files must be present:
 
 ```
 boot.img, cam_vpu1.img, cam_vpu2.img, cam_vpu3.img,
@@ -79,7 +81,7 @@ md1img.img, pi_img.img, preloader.img, scp.img,
 spmfw.img, sspm.img, super.img
 ```
 Extract from fastboot rom only for MTK devices. 
-If any file is missing, it will be skipped and reported. Flashing stops if any partition fails.
+If any file is missing, it will be skipped and reported as such. Flashing stops if any partition fails.
 
 ---
 
