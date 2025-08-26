@@ -94,7 +94,7 @@ If any file is missing, it will be skipped and reported. Flashing stops if any p
 
 - You can customize the bulk flash list by editing the `FLASH_ALL` variable in the script.
 - Add dry-run or logging features if you want more control or traceability.
-- For Infinix X6731, make sure you’ve unlocked the bootloader before flashing `super.img`.
+-  make sure you’ve unlocked the bootloader before flashing `super.img`.
 
 ---
 
