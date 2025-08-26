@@ -54,7 +54,7 @@ FASTBOOT COMMANDS:
 ADB COMMANDS:
 10) List adb devices
 11) Install APK
-12) Shell into device
+12) Shell into the device
 13) Push file to device
 14) Pull file from device
 15) Reboot to bootloader (adb)
@@ -78,7 +78,7 @@ dpm.img, dtbo.img, gz.img, lk.img, mcupm.img,
 md1img.img, pi_img.img, preloader.img, scp.img,
 spmfw.img, sspm.img, super.img
 ```
-extract from fastboot rom only for mtk devices 
+Extract from fastboot rom only for MTK devices. 
 If any file is missing, it will be skipped and reported. Flashing stops if any partition fails.
 
 ---
@@ -88,14 +88,14 @@ If any file is missing, it will be skipped and reported. Flashing stops if any p
 - Unlocking the bootloader will wipe all data.
 - Erasing FRP will remove Google account protection.
 - Always verify your `.img` files before flashing to avoid bricking your device.
-
+- don`t flash modify "img' like lk and others 
 ---
 
 ### 🧠 Tips
 
 - You can customize the bulk flash list by editing the `FLASH_ALL` variable in the script.
 - Add dry-run or logging features if you want more control or traceability.
--  make sure you’ve unlocked the bootloader before flashing `super.img`.
+-  Make sure you’ve unlocked the bootloader before flashing `super.img`.
 
 ---
 
