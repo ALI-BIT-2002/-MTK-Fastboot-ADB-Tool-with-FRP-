@@ -82,7 +82,7 @@ spmfw.img, sspm.img, super.img
 ```
 Extract from fastboot rom only for MTK devices. 
 If any file is missing, it will be skipped and reported as such. Flashing stops if any partition fails.
-
+ tested on  Infinix ZERO 30 5G (X6731), not sure about the other
 ---
 
 ### ⚠️ Warnings
