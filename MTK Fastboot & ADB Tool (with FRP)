@@ -1,0 +1,115 @@
+def erase_frp():
+    confirm = input("⚠️ This will erase FRP lock. Type ERASE to continue: ").strip().upper()
+    if confirm == "ERASE":
+        run_cmd([FASTBOOT, "erase", "frp"])
+    else:
+        print("Cancelled.")
+
+def flash_all_images():
+    print("🚀 Flashing full image set…")
+    missing = []
+    for part, img in FLASH_ALL:
+        if not Path(img).exists():
+            missing.append(img)
+            continue
+
+        print(f"→ Flashing {part} from {img}")
+        ret = run_cmd([FASTBOOT, "flash", part, img])
+        if ret != 0:
+            print(f"❌ Failed on {part}. Aborting.")
+            return
+
+    if missing:
+        print("⚠️ The following files were not found, skipped:")
+        for f in missing:
+            print(f"   • {f}")
+    else:
+        print("✅ All partitions flashed successfully.")
+
+def main():
+    if not FASTBOOT:
+        print("❌ fastboot not found! Place in platform-tools or add to PATH.")
+        sys.exit(1)
+    if not ADB:
+        print("❌ adb not found! Place in platform-tools or add to PATH.")
+        # We continue so fastboot still works
+
+    while True:
+        menu()
+        choice = input("👉 Select option: ").strip()
+
+        # -- FASTBOOT --
+        if choice == "1":
+            run_cmd([FASTBOOT, "devices"])
+        elif choice == "2":
+            part = input("Partition name: ").strip()
+            img  = input("Image file path: ").strip()
+            if Path(img).exists():
+                run_cmd([FASTBOOT, "flash", part, img])
+            else:
+                print("❌ File not found.")
+        elif choice == "3":
+            img = input("Image file path: ").strip()
+            if Path(img).exists():
+                run_cmd([FASTBOOT, "boot", img])
+            else:
+                print("❌ File not found.")
+        elif choice == "4":
+            part = input("Partition to erase: ").strip()
+            run_cmd([FASTBOOT, "erase", part])
+        elif choice == "5":
+            part = input("Partition to format: ").strip()
+            run_cmd([FASTBOOT, "format", part])
+        elif choice == "6":
+            run_cmd([FASTBOOT, "reboot"])
+        elif choice == "7":
+            run_cmd([FASTBOOT, "getvar", "all"])
+        elif choice == "8":
+            confirm = input("⚠️ Unlocking will wipe all data. Type YES to continue: ").strip().upper()
+            if confirm == "YES":
+                run_cmd([FASTBOOT, "oem", "unlock"])
+            else:
+                print("Cancelled.")
+        elif choice == "9":
+            erase_frp()
+
+        # -- Bulk Flash --
+        elif choice == "17":
+            flash_all_images()
+
+        # -- ADB --
+        elif choice == "10":
+            run_cmd([ADB, "devices"])
+        elif choice == "11":
+            apk = input("APK file path: ").strip()
+            if Path(apk).exists():
+                run_cmd([ADB, "install", apk])
+            else:
+                print("❌ File not found.")
+        elif choice == "12":
+            run_cmd([ADB, "shell"])
+        elif choice == "13":
+            src = input("Local file path: ").strip()
+            dst = input("Device path: ").strip()
+            if Path(src).exists():
+                run_cmd([ADB, "push", src, dst])
+            else:
+                print("❌ File not found.")
+        elif choice == "14":
+            src = input("Device file path: ").strip()
+            dst = input("Local path: ").strip()
+            run_cmd([ADB, "pull", src, dst])
+        elif choice == "15":
+            run_cmd([ADB, "reboot", "bootloader"])
+        elif choice == "16":
+            run_cmd([ADB, "reboot", "recovery"])
+
+        # -- Exit / Fallback --
+        elif choice == "0":
+            print("👋 Exiting tool...")
+            sys.exit()
+        else:
+            print("❌ Invalid choice.")
+
+if __name__ == "__main__":
+    main()
