@@ -1,4 +1,4 @@
-Got it, Tohid! You're asking for a README and instructions for your MTK Fastboot & ADB Tool script — especially now that you've added the bulk flashing feature. Here's a clean, professional README you can include alongside your Python script:
+
 
 ---
 
@@ -98,4 +98,4 @@ If any file is missing, it will be skipped and reported. Flashing stops if any p
 
 ---
 
-Let me know if you'd like a version in Hindi or want to turn this into a GUI or executable next.
+
