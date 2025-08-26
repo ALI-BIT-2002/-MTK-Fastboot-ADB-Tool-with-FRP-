@@ -16,9 +16,6 @@ A command-line utility for MediaTek-based Android devices that simplifies common
 - 🚀 One-click bulk flashing of multiple partitions
 - ✅ Auto-detects `fastboot` and `adb` from environment, local folder, or system PATH
 
-- 
-<img width="1487" height="748" alt="Screenshot 2025-08-27 020131" src="https://github.com/user-attachments/assets/2cd4f420-bc42-471c-80b9-17c409b40e43" />
-
 ---
 
 ### 🖥️ Requirements
@@ -43,6 +40,8 @@ Or
 ---
 
 ### 📋 Menu Overview
+- 
+<img width="1487" height="748" alt="Screenshot 2025-08-27 020131" src="https://github.com/user-attachments/assets/2cd4f420-bc42-471c-80b9-17c409b40e43" />
 
 ```
 FASTBOOT COMMANDS:
