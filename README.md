@@ -69,6 +69,7 @@ ADB COMMANDS:
 
 ### 🚀 Flash Full Image Set (Option 17)
 
+
 This option flashes all critical partitions in one go. The following files must be present:
 
 ```
@@ -77,7 +78,7 @@ dpm.img, dtbo.img, gz.img, lk.img, mcupm.img,
 md1img.img, pi_img.img, preloader.img, scp.img,
 spmfw.img, sspm.img, super.img
 ```
-
+extract from fastboot rom only for mtk devices 
 If any file is missing, it will be skipped and reported. Flashing stops if any partition fails.
 
 ---
