@@ -20,7 +20,7 @@ A command-line utility for MediaTek-based Android devices that simplifies common
 
 ### 🖥️ Requirements
 
-- Python 3.6+
+- Python 3.6+ https://www.python.org/
 - `fastboot` and `adb` binaries (from Android SDK Platform Tools)
 - Windows or Linux (tested on both)
 
