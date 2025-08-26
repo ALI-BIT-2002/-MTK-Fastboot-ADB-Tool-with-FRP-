@@ -93,8 +93,8 @@ If any file is missing, it will be skipped and reported as such. Flashing stops 
 - don`t flash modify `.img`  like lk and others 
 ---
 
-### 🧠 Tips
-
+### 🧠 Tips for power users
+  
 - You can customize the bulk flash list by editing the `FLASH_ALL` variable in the script.
 - Add dry-run or logging features if you want more control or traceability.
 -  Make sure you’ve unlocked the bootloader before flashing `super.img`.
