@@ -82,9 +82,12 @@ dpm.img, dtbo.img, gz.img, lk.img, mcupm.img,
 md1img.img, pi_img.img, preloader.img, scp.img,
 spmfw.img, sspm.img, super.img
 ```
-Extract from fastboot rom only for MTK devices. 
+ 
+ Extract from fastboot rom only for MTK devices. 
 If any file is missing, it will be skipped and reported as such. Flashing stops if any partition fails.
- tested on  Infinix ZERO 30 5G (X6731), not sure about the other
+ tested on  Infinix ZERO 30 5G (X6731), not sure about the other, 
+ 
+- put the files in the dist folder and make sure the fastboot exe also has
 ---
 
 ### ⚠️ Warnings
