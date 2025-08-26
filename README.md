@@ -89,8 +89,8 @@ If any file is missing, it will be skipped and reported as such. Flashing stops 
 
 - Unlocking the bootloader will wipe all data.
 - Erasing FRP will remove Google account protection.
-- Always verify your `.img` files before flashing to avoid bricking your device.
-- don`t flash modify "img' like lk and others 
+- Always verify your  `.img` files before flashing to avoid bricking your device.
+- don`t flash modify `.img`  like lk and others 
 ---
 
 ### 🧠 Tips
