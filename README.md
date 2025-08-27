@@ -39,7 +39,7 @@ if you confused or it not work jus copy pest all platforms tool binaries in dist
     ``` 
     or 
 
-just download https://t.me/ghokielrom/5694
+just download https://www.dropbox.com/scl/fi/d7ms325350kct3ueqmdiu/MTK-Fastboot-ADB-Tool-with-FRP.zip?rlkey=rbugbu55li1amfa9tgtohtdg9&st=49yn663d&dl=0
 
  --- 
   
